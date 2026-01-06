@@ -4,7 +4,7 @@ i = 0
 
 while i < numb_zero:
     my_list.remove(0)
-    my_list.append(0)
     i = i + 1
 
+my_list = my_list + ([0] * numb_zero)
 print(my_list)
