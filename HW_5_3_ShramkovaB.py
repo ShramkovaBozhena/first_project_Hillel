@@ -8,6 +8,7 @@ symbol = string.punctuation + " "
 for i in symbol:
     new_str = new_str.replace(i, "")
 
-new_str = "#" + new_str[0:138]
+new_str = "#" + new_str[0:139]
+
 
 print(new_str)
