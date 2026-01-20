@@ -4,7 +4,8 @@ def common_elements():
     result = my_set_one.intersection(my_set_two)
     return result
 
-assert common_elements() == {0, 75, 45, 15, 90, 60, 30}, "Test4"
+assert common_elements() == {0, 75, 45, 15, 90, 60, 30}, "Test1"
 print("OK")
+
 
 
