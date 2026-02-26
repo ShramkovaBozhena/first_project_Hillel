@@ -49,15 +49,15 @@ class Group:
 
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
-st3 = Student('Female', 25, 'Lila', 'Taylor', 'AN145')
-st4 = Student('Female', 25, 'Ola', 'Taylor', 'AN145')
-st5 = Student('Female', 25, 'Bozhena', 'Taylor', 'AN145')
-st6 = Student('Female', 25, 'Oleg', 'Taylor', 'AN145')
-st7 = Student('Female', 25, 'Den', 'Taylor', 'AN145')
-st8 = Student('Female', 25, 'Max', 'Taylor', 'AN145')
-st9 = Student('Female', 25, 'Lena', 'Taylor', 'AN145')
-st10 = Student('Female', 25, 'Marina', 'Taylor', 'AN145')
-st11 = Student('Female', 25, 'Katya', 'Taylor', 'AN145')
+st3 = Student('Female', 25, 'Lilya', 'Smith', 'AN143')
+st4 = Student('Female', 26, 'Olya', 'Sofich', 'AN141')
+st5 = Student('Female', 29, 'Bozhena', 'Kisenko', 'AN148')
+st6 = Student('Male', 26, 'Oleg', 'Boyko', 'AN186')
+st7 = Student('Male', 24, 'Den', 'Lemer', 'AN167')
+st8 = Student('Male', 23, 'Max', 'Gomez', 'AN155')
+st9 = Student('Female', 26, 'Lena', 'Smith', 'AN150')
+st10 = Student('Female', 24, 'Marina', 'Shramkova', 'AN149')
+st11 = Student('Female', 18, 'Katya', 'Lesik', 'AN135')
 
 gr = Group('PD1')
 
@@ -85,5 +85,6 @@ assert isinstance(gr.find_student('Jobs'), Student) is True
 
 gr.delete_student('Taylor')
 print(gr)
+
 
 gr.delete_student('Taylor')
