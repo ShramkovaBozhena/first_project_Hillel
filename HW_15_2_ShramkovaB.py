@@ -9,13 +9,13 @@ class Fraction:
         return Fraction(general_a, general_b)
     
     def __add__(self, other):
-        general_b = self.b * other.b
         general_a = self.a * other.b + other.a * self.b
+        general_b = self.b * other.b
         return Fraction(general_a, general_b)
 
     def __sub__(self, other):
-        general_b = self.b * other.b
         general_a = self.a * other.b - other.a * self.b
+        general_b = self.b * other.b
         return Fraction(general_a, general_b)
 
     def __eq__(self, other):
@@ -52,3 +52,4 @@ f_1 = Fraction(2, 4)
 f_2 = Fraction(3, 6)
 assert f_1 == f_2  # True
 print('OK')
+
