@@ -6,22 +6,31 @@ class Rectangle:
         
     def get_square(self):
         return self.width * self.height
-
+    
+    def find_width(self, other):
+        return max(self.width, other.width)
+    
     def __eq__(self, other):
         if isinstance(other, Rectangle):
             return self.get_square() == other.get_square()
         return False
 
     def __add__(self, other):
-        if isinstance(other, Rectangle):
-            add_square = self.get_square() + other.get_square()
-            return Rectangle(add_square, 1)
+        if not isinstance(other, Rectangle):
+            return NotImplemented
+        add_square = self.get_square() + other.get_square()
+        new_width = self.find_width(other)
+        new_height = add_square / new_width
+        return Rectangle(new_width, new_height)
         
     def __mul__(self, n):
-        if isinstance(n, int):
-            mul_square = self.get_square() * n
-            return Rectangle(mul_square, 1)
-
+        if not isinstance(n, int):
+            return NotImplemented
+        mul_square = self.get_square() * n
+        new_width = self.width
+        new_height = mul_square / new_width
+        return Rectangle(new_width, new_height)
+        
     def __str__(self):
         return f'Rectangle({self.width}, {self.height})'
 
@@ -37,3 +46,4 @@ r4 = r1 * 4
 assert r4.get_square() == 32, 'Test4'
 
 assert Rectangle(3, 6) == Rectangle(2, 9), 'Test5'
+
